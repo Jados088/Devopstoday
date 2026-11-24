@@ -60,9 +60,11 @@ a{color:#9f8aff;text-decoration:none;font-weight:bold}
 function togglePassword(){
  const p=document.getElementById('password');
  p.type=p.type==='password'?'text':'password';
+
 }
 document.getElementById('loginForm').addEventListener('submit',function(e){
  e.preventDefault();
+
  const email=document.getElementById('email').value.trim().toLowerCase();
  const password=document.getElementById('password').value;
  const users=JSON.parse(localStorage.getItem('cw_users')||'[]');
